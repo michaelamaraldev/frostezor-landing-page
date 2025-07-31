@@ -27,7 +27,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="py-5">
+      <div className="py-5 bg-white dark:bg-gray-900">
         <div className="container">
           <div className="flex items-center justify-between">
             <Image src={Logo} alt="Saas Logo" height={40} width={40} />
@@ -44,11 +44,11 @@ const Header = () => {
               )}
             </button>
 
-            <nav className="hidden md:flex gap-6 text-black/60 dark:text-white items-center">
-              <a href="#inicio">Início</a>
-              <a href="#sobre">Sobre</a>
-              <a href="#curso">Curso</a>
-              <a href="#precos">Preços</a>
+            <nav className="hidden md:flex gap-6 text-black/60 dark:text-gray-300 items-center">
+              <a href="#inicio" className="hover:text-black dark:hover:text-white transition-colors">Início</a>
+              <a href="#sobre" className="hover:text-black dark:hover:text-white transition-colors">Sobre</a>
+              <a href="#curso" className="hover:text-black dark:hover:text-white transition-colors">Curso</a>
+              <a href="#precos" className="hover:text-black dark:hover:text-white transition-colors">Preços</a>
               <button className="btn btn-primary">
                 Garanta já
               </button>
@@ -56,7 +56,7 @@ const Header = () => {
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle theme"
-                className="p-2 rounded-full border border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                className="p-2 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
                 {theme === "dark" ? (
                   <svg
@@ -65,7 +65,7 @@ const Header = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 text-yellow-500"
+                    className="w-5 h-5 text-yellow-500"
                   >
                     <path
                       strokeLinecap="round"
@@ -80,7 +80,7 @@ const Header = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 text-gray-700"
+                    className="w-5 h-5 text-gray-700 dark:text-gray-300"
                   >
                     <path
                       strokeLinecap="round"
@@ -96,7 +96,7 @@ const Header = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black/50 z-30 flex items-center justify-center animate-fade-in"> 
+        <div className="md:hidden fixed inset-0 bg-black/50 z-30 flex items-center justify-center"> 
           <div className="w-full max-w-sm bg-white dark:bg-gray-900 h-full py-10 px-6 relative flex flex-col items-center justify-center">
             <button
               onClick={toggleMenu}
@@ -107,17 +107,17 @@ const Header = () => {
             </button>
 
             <nav className="flex flex-col gap-6 text-2xl text-black dark:text-white items-center">
-              <a href="#inicio" onClick={toggleMenu}>Início</a>
-              <a href="#sobre" onClick={toggleMenu}>Sobre</a>
-              <a href="#Curso" onClick={toggleMenu}>Curso</a>
-              <a href="#Precos" onClick={toggleMenu}>Preços</a>
-              <button className="btn btn-primary mt-4" onClick={toggleMenu}>
+              <a href="#inicio" onClick={toggleMenu} className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Início</a>
+              <a href="#sobre" onClick={toggleMenu} className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Sobre</a>
+              <a href="#curso" onClick={toggleMenu} className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Curso</a>
+              <a href="#precos" onClick={toggleMenu} className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Preços</a>
+              <button className="btn btn-primary mt-6" onClick={toggleMenu}>
                 Garanta já
               </button>
               <button
                 onClick={() => { toggleTheme(); toggleMenu(); }}
                 aria-label="Toggle theme"
-                className="p-2 rounded-full border border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                className="p-2 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors mt-4"
               >
                 {theme === "dark" ? (
                   <svg

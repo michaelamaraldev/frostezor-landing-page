@@ -1,4 +1,3 @@
-// src/sections/Sobre.tsx
 import { Info } from "@/components/Info";
 import { Container } from "@/components/Container";
 import { Paragrafo } from "@/components/Paragrafo";
@@ -8,8 +7,8 @@ import { TfiTarget } from "react-icons/tfi";
 
 export const Sobre = () => {
   return (
-    <section id="sobre">
-      <Container className="flex flex-col md:flex-row gap-10 lg:gap-12 items-center md:items-start py-10 md:py-16">
+    <section id="sobre" className="bg-white dark:bg-gray-900">
+      <Container className="flex flex-col md:flex-row gap-10 lg:gap-12 items-center md:items-start py-16 md:py-20">
         <div className="w-full md:w-5/12 lg:w-1/2 flex justify-center">
           <div className="w-full max-w-sm md:max-w-none aspect-square relative rounded-3xl shadow-lg overflow-hidden">
             <img
@@ -21,9 +20,9 @@ export const Sobre = () => {
         </div>
 
         <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col">
-          <Titulo>Sobre o mentor</Titulo>
-          <Paragrafo className="mt-4 mb-8">
-            Cássio <strong>“frostezoR”</strong> Bergamo é ex-jogador profissional de Counter‑Strike e atual criador de conteúdo, com passagens por equipes como Keyd Stars, FURIA Academy, Santos e DETONA.
+          <Titulo level={2} className="text-gray-900 dark:text-white">Sobre o mentor</Titulo>
+          <Paragrafo className="mt-6 mb-8 text-gray-700 dark:text-gray-300">
+            Cássio <strong>&quot;frostezoR&quot;</strong> Bergamo é ex-jogador profissional de Counter‑Strike e atual criador de conteúdo, com passagens por equipes como Keyd Stars, FURIA Academy, Santos e DETONA.
             Com anos de experiência no cenário competitivo, ele transforma seu conhecimento em ensino prático e acessível, ajudando jogadores a evoluírem com estratégias, disciplina e mentalidade de alto nível.
           </Paragrafo>
 
@@ -32,13 +31,13 @@ export const Sobre = () => {
               title="Objetivo"
               description="Ajudar jogadores de CS2 a evoluírem de forma consistente, usando métodos do cenário profissional e focando em disciplina, leitura de jogo e desempenho individual."
             >
-              <TfiTarget className="w-4 h-4 sm:w-5 sm:h-5 dark:text-white" />
+              <TfiTarget className="w-5 h-5 text-black dark:text-white" />
             </Info>
             <Info
               title="Visão"
               description="Formar jogadores estratégicos e conscientes, preparados para se destacar com consistência em lobbys de alto nível em plataformas como FACEIT e Gamers Club, ou no cenário competitivo profissional."
             >
-              <FaEye className="w-4 h-4 sm:w-5 sm:h-5 dark:text-white" />
+              <FaEye className="w-5 h-5 text-black dark:text-white" />
             </Info>
           </div>
         </div>

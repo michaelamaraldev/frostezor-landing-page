@@ -5,6 +5,8 @@ interface ParagrafoProps {
 
 export const Paragrafo = ({ children, className = "" }: ParagrafoProps) => {
   return (
-    <p className={`text-heading-3 md:text-lg dark:text-white ${className}`}> {children} </p>
+    <p className={`text-lg leading-relaxed text-gray-700 dark:text-gray-300 ${className}`}>
+      {children}
+    </p>
   );
 };

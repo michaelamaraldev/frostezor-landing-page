@@ -1,11 +1,17 @@
-interface TitleProps {
+interface TituloProps {
   children: React.ReactNode;
+  level?: number;
+  className?: string;
 }
 
-export const Titulo = ({ children }: TitleProps) => {
+export const Titulo = ({ children, level = 1, className = "" }: TituloProps) => {
+  const HeadingTag = `h${level}` as keyof JSX.IntrinsicElements;
+  
+  const baseClasses = "font-semibold text-2xl sm:text-3xl md:text-4xl";
+  
   return (
-    <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black dark:from-white to-[#001E80] text-transparent bg-clip-text mt-6">
+    <HeadingTag className={`${baseClasses} ${className}`}>
       {children}
-    </h1>
+    </HeadingTag>
   );
 };
